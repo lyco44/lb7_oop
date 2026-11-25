@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+
+class Calculation
+{
+private:
+    double num1, num2;
+
+public:
+    void set(double a, double b)
+    {
+        num1 = a;
+        num2 = b;
+    }
+
+    double getNum1()
+    {
+        return num1;
+    }
+
+    double getNum2()
+    {
+        return num2;
+    }
+
+    double sum()
+    {
+        return num1 + num2;
+    }
+
+    double difference()
+    {
+        return num1 - num2;
+    }
+
+    double multiply()
+    {
+        return num1 * num2;
+    }
+
+    double divide()
+    {
+        return num1 / num2;
+    }
+};
+
+int main()
+{
+    Calculation calc;
+    double a, b;
+
+    cin >> a >> b;
+
+    calc.set(a, b);
+
+    cout << "Number 1: " << calc.getNum1() << endl;
+    cout << "Number 2: " << calc.getNum2() << endl;
+
+    cout << "Sum: " << calc.sum() << endl;
+    cout << "Difference: " << calc.difference() << endl;
+    cout << "Multiply: " << calc.multiply() << endl;
+
+    if (calc.getNum2() != 0)
+    {
+        cout << "Divide: " << calc.divide() << endl;
+    }
+    else
+    {
+        cout << "Cannot divide by zero" << endl;
+    }
+
+    return 0;
+}
